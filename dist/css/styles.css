@@ -10858,6 +10858,9 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
+  border-top: solid 10px;
+  -o-border-image: repeating-linear-gradient(-75deg, yellow, yellow 10px, black 10px, black 20px) 20;
+     border-image: repeating-linear-gradient(-75deg, yellow, yellow 10px, black 10px, black 20px) 20;
 }
 
 p {
