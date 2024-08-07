@@ -44,7 +44,7 @@
         <header class="masthead">
             <div class="container">
                 <div class="masthead-heading text-uppercase">OGC API - Records</div>
-                <div class="masthead-subheading">Discovering geospatial data on the web</div>
+                <div class="masthead-subheading">Bringing data to the users</div>
                 <!--Generated with AI ∙ 20 June 2024 at 2:32 pm-->
                 <a class="btn btn-primary btn-xl text-uppercase" href="#why">Tell Me More</a>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#getstarted">Get Started</a>
@@ -56,11 +56,56 @@
                 <div class="text-center"><h2 class="section-heading text-uppercase">Ensure your data is not buried in the deep web</h2></div>
                 <div class="row justify-content-center">
                     <div class="col-6">
-                        <p class="text-muted">It is estimated that more than 90% of the web content is not indexed by search engines. This includes content that is intentionally hidden such as private repositories, but also some organisation specific repositories, academic databases and government reports.</p>
+                        <p class="text-muted">
+                            It is estimated
+                            <a href="https://web.archive.org/web/20141108182138/http://akinozkan.com/deep-web-derin-internet/" target="_blank">that more than 80% of the web content is not indexed by search engines.</a>
+                            This includes content that is intentionally hidden such as private repositories, but also some organisation specific repositories, academic databases and government reports.
+                        </p>
                         <p class="text-muted">Do you create geospatial resources, like data, services or ML models? OGC API – Records gives you Standard interfaces to expose your resources and a Standard vocabulary to describe them.</p>
-                        <p class="text-muted">This description will make sure that search engines will index the resources in a structured way, so that humans and machines can find them, understand their descriptions and fetch them, if they want to.</p>
+                        <p class="text-muted">This description will make sure that search engines will index the resources in a structured way, so that humans and machines can find them, understand their descriptions and fetch them.</p>
                     </div>
                     <img src="assets/img/search-engines.jpeg" alt="..." style="width: 40%" title="Generated with AI ∙ 6 August 2024 at 0:39 pm" />
+                </div>
+            </div>
+        </section>
+        <!-- Why-->
+        <section class="page-section bg-light" id="why">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Why?</h2>
+                    <h3 class="section-subheading text-muted">Main reasons to implement a catalogue using OGC API - Records</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Interoperable</h4>
+                        <p class="text-muted">
+                            The Standard is developed and maintained by an
+                            <a href="https://www.ogc.org/" target="_blank">independent Standards body,</a>
+                            which also offers compliance and certification, ensuring that interoperability really works. In addition, there was an harmonisation with the
+                            <a href="https://stacspec.org/en" target="_blank">STAC specification</a>
+                            , in order to make sure that STAC catalogues can understand OGC API - Records catalogues and vice versa.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-screwdriver-wrench fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Flexible</h4>
+                        <p class="text-muted">OGC API - Records supports different deployment patterns, which address different use cases. For instance, a public directory with satellite imagery can benefit from having a crawlable catalogue (e.g.: also called “static” catalogue), which can be created with static files without the need to install any middleware or databases.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop-code fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Based on Best Practices</h4>
+                        <p class="text-muted">The Standard is based on the technologies and vocabularies that make up the web today, such as REST, OpenAPI, JSON and HTML. This should ensure a smooth learning curve for any web developer, even if they are not familiar with GIS.</p>
+                    </div>
                 </div>
             </div>
         </section>
