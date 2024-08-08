@@ -91,7 +91,7 @@ html(lang='en')
             .container
                 .text-center
                     h2.section-heading.text-uppercase Why?
-                    h3.section-subheading.text-muted Main reasons to implement a catalogue using OGC API - Records
+                    h3.section-subheading.text-muted Main reasons to implement a catalog using OGC API - Records
                 .row.text-center
                     .col-md-4
                         span.fa-stack.fa-4x
@@ -104,14 +104,14 @@ html(lang='en')
                             |  which also offers compliance and certification, ensuring that interoperability really works.
                             | In addition, there was an harmonisation with the 
                             a(href="https://stacspec.org/en" target="_blank") STAC specification
-                            | , in order to make sure that STAC catalogues can understand OGC API - Records catalogues and vice versa.
+                            | , in order to make sure that STAC catalogs can understand OGC API - Records catalogs and vice versa.
                     .col-md-4
                         span.fa-stack.fa-4x
                             i.fas.fa-circle.fa-stack-2x.text-primary
                             i.fas.fa-screwdriver-wrench.fa-stack-1x.fa-inverse
                         h4.my-3 Flexible
                         p.text-muted
-                            | OGC API - Records supports different deployment patterns, which address different use cases. For instance, a public directory with satellite imagery can benefit from having a crawlable catalogue (e.g.: also called “static” catalogue), which can be created with static files without the need to install any middleware or databases. 
+                            | OGC API - Records supports different deployment patterns, which address different use cases. For instance, a public directory with satellite imagery can benefit from having a crawlable catalog (e.g.: also called “static” catalogue), which can be created with static files without the need to install any middleware or databases. 
                     .col-md-4
                         span.fa-stack.fa-4x
                             i.fas.fa-circle.fa-stack-2x.text-primary
@@ -151,6 +151,40 @@ html(lang='en')
                             br
                             a(href="standard.html" target="_blank") Learn more 
                             | about the OGC API - Records building blocks and deployment patterns.                            
+
+        // In action
+        section#inaction.page-section.bg-light
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase See it In Action
+                    h3.section-subheading.text-muted This is a list of public catalogs that publish metadata using OGC API - Records. Please
+                        a(href='mailto:devrel@ogc.org') get in touch
+                        |, if you would like to add your server to the list.
+
+                .row                       
+                    .col-lg-4
+                        .team-member
+                            img.mx-auto.rounded-circle(src='assets/img/wmo-logo.png', alt='...')
+                            h4 WMO WIS2 Global Discovery Catalogue instance
+                            p.text-muted Powered by pygeoapi
+                            p.text-muted The WIS2 catalog from the World Meteorological Organization publishes weather/climate/water data from across the world.
+                            a.btn.btn-dark.btn-social.mx-2(href='https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata' title='Catalog Resource' target="_blank")
+                                i.fa.fa-link
+                            a.btn.btn-dark.btn-social.mx-2(href='https://wis2-gdc.weather.gc.ca/openapi' title='OpenAPI definition' target="_blank")
+                                i.fa.fa-code
+
+
+                    .col-lg-4
+                        .team-member
+                            img.mx-auto.rounded-circle(src='assets/img/logo-emotionalcities.svg', alt='...')
+                            //- img.mx-auto.rounded-circle(src='assets/img/ecities.jpeg', alt='...')
+                            h4 eMOTIONAL Cities Catalog
+                            p.text-muted Powered by pygeoapi
+                            p.text-muted The catalog from the eMOTIONAL Cities project publishes +100 datasets from the Urban Health domain.
+                            a.btn.btn-dark.btn-social.mx-2(href='https://emotional.byteroad.net/catalogue' title='Catalog Resource' target="_blank")
+                                i.fa.fa-link
+                            a.btn.btn-dark.btn-social.mx-2(href='https://emotional.byteroad.net/openapi' title='OpenAPI definition' target="_blank")
+                                i.fa.fa-code
 
         // Footer
         footer.footer.py-4
