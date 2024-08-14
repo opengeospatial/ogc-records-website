@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Records Building Blocks</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/3d_emblem_lockup.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <!--script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" crossorigin="anonymous"></script>
+        <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css', crossorigin='anonymous')-->
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!--script(src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js")-->
+        <!--link(rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3/swagger-ui.css")-->
+        <!--link(rel="stylesheet" type="text/css" href="assets/swagger-ui.css")-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Standard-->
+        <section class="page-section bg-light" id="standard">
+            <div class="container">
+                <div class="text-center"><h2 class="section-heading text-uppercase">Records Building Blocks</h2></div>
+                <div class="row text-justified">
+                    <div class="col-md-6">
+                        <p class="text-muted">
+                            The
+                            <i>Record</i>
+                            is the atomic unit of information in a catalog. The record model provides a minimal set of information to facilitate the discovery of the resource it points to (e.g.: discovery metadata). This include some generic properties such as title, description, formats, but also information about
+                            <i>when</i>
+                            and
+                            <i>who</i>
+                            created it. These properties are called
+                            <i>queryables</i>
+                            , as they can be used to query searchable catalogs.
+                        </p>
+                        <p class="text-muted">
+                            As in other OGC API Standards,
+                            <a href="https://docs.ogc.org/DRAFTS/20-004.html#record-collection-overview" target="_blank">there are no mandatory encodings.</a>
+                            Servers are free to offer what they wish and clients are expected to use content negotiation to retrieve a suitable format.
+                        </p>
+                        <p class="text-muted">
+                            The
+                            <a href="https://github.com/opengeospatial/ogcapi-records?tab=readme-ov-file#the-record-common-component" target="_blank">record model</a>
+                            was intentionally kept simple, so that it could be use by non metadata experts. It only has one mandatory field and a few optional fields. It is anticipated that it will be extended by information communities who wish to add more content about their resources (e.g.: Machine Learning, Earth Observation).
+                        </p>
+                        <p class="text-muted">
+                            <a href="https://emotional.byteroad.net/collections/ec_catalog/items/hex350_grid_cardio_1920" target="_blank">This</a>
+                            is an example of a metadata record that uses some optional fields from the atomic model and extends it with more fields that are relevant for the use case.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-muted">
+                            A
+                            <i>record collection</i>
+                            (also called
+                            <i>catalog</i>
+                            ) describes a group of related resources, which could be metadata records but also features, coverages or another type of geospatial information.
+                        </p>
+                        <div class="text-center text-muted"><img src="assets/img/oar-blocks.png" alt="..." style="width: 40%" title="Generated with AI ∙ 6 August 2024 at 0:39 pm" /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
