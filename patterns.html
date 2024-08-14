@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Standard</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/3d_emblem_lockup.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <!--script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" crossorigin="anonymous"></script>
+        <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css', crossorigin='anonymous')-->
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!--script(src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js")-->
+        <!--link(rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3/swagger-ui.css")-->
+        <!--link(rel="stylesheet" type="text/css" href="assets/swagger-ui.css")-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Standard-->
+        <section class="page-section bg-light" id="standard">
+            <div class="container">
+                <div class="text-center"><h2 class="section-heading text-uppercase">OGC API - Records Standard</h2></div>
+                <div class="row text-justified">
+                    <div class="col-md-6">
+                        <p class="text-muted">
+                            The core requirements class boils down to three simple requirements (
+                            <a href="https://docs.ogc.org/is/20-057/20-057.html#req_core_tc-op" target="_blank">1</a>
+                            ,
+                            <a href="https://docs.ogc.org/is/20-057/20-057.html#req_core_core_tc-success" target="_blank">5</a>
+                            and
+                            <a href="https://docs.ogc.org/is/20-057/20-057.html#req_core_core_tc-error" target="_blank">6</a>
+                            ), which capture what most web map applications are already doing:
+                        </p>
+                        <div class="text-left">
+                            <ul>
+                                <li>
+                                    <p class="text-muted">
+                                        Tiles must be available using a URL following a template such as:
+                                        <code>https://somehost.com/tiles/{z}/{x}/{y}.png</code>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">
+                                        Successful responses must return an http response with a
+                                        <code>200</code>
+                                        status code.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">
+                                        If the requested tile is out-of range, a
+                                        <code>400</code>
+                                        or
+                                        <code>404</code>
+                                        status codes should be returned (
+                                        <code>204</code>
+                                        , in the case of empty tiles).
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-muted">
+                            If you choose to also confom to the
+                            <a href="https://docs.ogc.org/DRAFTS/19-072.html">“OGC API - Common - Part 1: Core”</a>
+                            Standard, then the {z}, {x} and {y} parameters need to be renamed to {tileMatrix}, {tileCol} and {tileRow}. A server that conforms to all these requirements, should advertise it in a specific
+                            <code>/conformance</code>
+                            endpoint.
+                        </p>
+                        <p class="text-muted">
+                            If your tileset has some custom characteristics, you may want clients to know about these characteristics, by implementing the Tileset conformance class. The information about tilesets -
+                            <a href="https://docs.ogc.org/is/17-083r4/17-083r4.html#toc20" target="_blank">TileSet metadata</a>
+                            - is drawn from another OGC Standard: the
+                            <a href="https://docs.ogc.org/is/17-083r4/17-083r4.html" target="_blank">OGC Two Dimensional Tile Matrix Set and Tile Set Metadata</a>
+                            . A tileset that does not cover the entire world, provides a limited set of zoom levels or uses an alternative projection are use cases for providing tileset metadata.
+                        </p>
+                        <p class="text-muted">Finally, the Tileset List Requirements Class provides a list of tileSets, described by a subset of the tileSet metadata and links to access those tileSets. This may be useful for servers that want to advertise multiple tileSets.</p>
+                        <p class="text-muted">
+                            If you want to follow the development of the OGC API - Tiles Standard, please refer to the
+                            <a href="https://github.com/opengeospatial/ogcapi-tiles" target="_blank">GitHub repository.</a>
+                            If you want to study the Tiles API, you can check out the
+                            <a href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/ogcapi-tiles-1.bundled.json" target="_blank">swagger page</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="text-muted">
+                            The diagram on the left, shows the basic steps a client should follow to access a tile (“OGC API - Common - Part 1: Core”). It starts by retrieving the list of collections available on the server and selecting one, in this example, "lakes". Then it retrieves the list of available TileMatrixSets, e.g.: the sets of tiles pre-rendered in a given coordinate reference system, and selects one. Finally, it requests a specific tile, using the
+                            <code>x,y,z</code>
+                            indexes.
+                        </p>
+                    </div>
+                    <div class="col-sm-9"><img src="assets/img/ogc-api-tiles.png" width="100%" title="OGC API - Tiles: Access workflow" alt=".." /></div>
+                </div>
+                <div class="row">
+                    <p class="text-muted">
+                        In this example we are requesting a vector tile, which is indicated by the file extension. The available formats are retrieved through content negotiation. Assuming a local server, the url path would look like:
+                        <code>http://localhost/collections/lakes/tiles/WorldCRS84Quad/0/0/0.pbf</code>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
