@@ -10,6 +10,7 @@ html(lang='en')
 
         title Records Building Blocks
 
+
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/3d_emblem_lockup.ico')
 
@@ -38,6 +39,7 @@ html(lang='en')
                     h2.section-heading.text-uppercase Records Building Blocks
                 .row.text-justified
                     .col-md-6
+
                         p.text-muted
                             |The 
                             i Record
@@ -64,103 +66,57 @@ html(lang='en')
                         p.text-muted
                             a(href="https://emotional.byteroad.net/collections/ec_catalog/items/hex350_grid_cardio_1920" target="_blank") This
                             | is an example of a metadata record that uses some optional fields from the atomic model and extends it with more fields that are relevant for the use case. 
-                    .col-md-6
+
                         p.text-muted
                             | A 
                             i record collection
                             | (also called 
                             i catalog
                             | ) describes a group of related resources, which could be metadata records but also features, coverages or another type of geospatial information.  
-                        .text-center.text-muted
-                            img(src='assets/img/oar-blocks.png', alt='...', style='width:40%', title='Generated with AI ∙ 6 August 2024 at 0:39 pm')
+                    .col-md-6
+                        p.text-muted
+                            | The
+                            i Records API 
+                            | specifies how to interact with the Catalog and request specific records. 
+                            | It is based on the principles of reusability, borrowing a lot of what was defined in 
+                            a(href="https://github.com/opengeospatial/ogcapi-features" target="_blank") OGC API – Features
+                            |.
+                        .text-left
+                            ul
+                                li
+                                    p.text-muted The 
+                                        i collections 
+                                        | endpoint can be used to access to information about a collection of records (
+                                        i e.g.  
+                                        | : catalog metadata):
+                                        code /collections
+                                li
+                                    p.text-muted The 
+                                        i items 
+                                        | endpoint can be used to access the metadata records:
+                                        code /collections/{collectionId}/items
+                                li
+                                    p.text-muted The 
+                                        i item 
+                                        | endpoint can be used to retrieve a specific metadata record:
+                                        code /collections/{collectionId}/items/{itemId}
+                        p.text-muted
+                            | The 
+                            i collection 
+                            | and 
+                            i items 
+                            | endpoints can be extended with additional parameters to enable querying. 
+                            | For instance, the 
+                            i items 
+                            | endpoint can be queried using a bounding box, a time frame of even free text. 
+                            | For more advanced query scenarios with complex filter expressions of logically connected query predicates, the 
+                            a(href="https://docs.ogc.org/DRAFTS/21-065r3.html" target="_blank") Common Query Language (CQL) 
+                            |can be used.
 
-
-                            //- | This is an example of a record encoded in JSON/GeoJSON.
-                            //- br
-                            //- code 
-                            //-     | {
-                            //-     br
-                            //-     |   "id": "radarsat-1",
-                            //-     br
-                            //-     | "title": "RADARSAT-1 Open Data",
-                            //-     br
-                            //-     | "description": "Launched in November 1995, RADARSAT-1 provided Canada and the world with an operational radar satellite system capable of timely delivery of large amounts of data. RADARSAT-1 used a synthetic aperture radar (SAR) sensor to image the Earth at a single microwave frequency of 5.3 GHz, in the C band (wavelength of 5.6 cm).",
-                            //-     br
-                            //-     | "extent": {
-                            //-     br
-                            //-     |    "spatial": [ -180, -90, 180, 90 ],
-                            //-     br
-                            //-     |    "temporal": [ "1995-11-04T14:22:00Z", "2013-03-29T00:00:00Z" ]
-                            //-     | },
-                            //-     br
-                            //-     | "itemType": "catalog",
-                            //-     br
-                            //-     | "keywords": [ "sar", "eo", "radar", "radarsat", "canada" ],
-                            //-     br
-                            //-     | "language": "en-CA",
-                            //-     br
-                            //-     | "publisher": {
-                            //-     br
-                            //-     |     "organizationName": "Canadian Space Agency (CSA)",
-                            //-     br
-                            //-     |     "contactInfo": {
-                            //-     br
-                            //-     |     "onlineResource": {
-                            //-     br
-                            //-     |         "href": "http://www.asc-csa.gc.ca/eng/satellites/radarsat1/Default.asp"
-                            //-     br
-                            //-     |     }
-                            //-     br
-                            //-     |     },
-                            //-     br
-                            //-     |     "role": {
-                            //-     br
-                            //-     |     "name": "producer"
-                            //-     br
-                            //-     |     }
-                            //-     br
-                            //-     | },
-                            //-     br
-                            //-     | "license": "proprietary",
-                            //-     br
-                            //-     | "properties": {
-                            //-     br
-                            //-     |     "sar:platform": "RADARSAT-1",
-                            //-     br
-                            //-     |     "sar:constellation": "RADARSAT",
-                            //-     br
-                            //-     |     "sar:instrument": "C-SAR"
-                            //-     br
-                            //-     | },
-                            //-     br
-                            //-     | "links": [
-                            //-     br
-                            //-     |     {
-                            //-     br
-                            //-     |     "href": "https://open.canada.ca/en/open-government-licence-canada",
-                            //-     br
-                            //-     |     "rel": "license",
-                            //-     br
-                            //-     |     "type": "text/html",
-                            //-     br
-                            //-     |     "title": "license"
-                            //-     br
-                            //-     |     },
-                            //-     br
-                            //-     |     {
-                            //-     br
-                            //-     |     "rel": "item",
-                            //-     br
-                            //-     |     "href": "slc/collection.json"
-                            //-     br
-                            //-     |     },
-                            //-     br
-                            //-     |     {
-                            //-     br
-                            //-     |     "rel": "item",
-                            //-     br
-                            //-     |     "href": "raw/collection.json"
-                            //-     br
-                            //-     |     }
-                            //-     br                                ]
-                            //-     | }
+                        p.text-muted
+                            i.fas.fa-book-open
+                            | You can read more about the OGC API - Records Standard on the
+                            a(href="https://docs.ogc.org/DRAFTS/20-004.html" target="_blank") editor's draft
+                            | and follow/participate (in) its development on the Standard's 
+                            a(href="https://github.com/opengeospatial/ogcapi-records?" target="_blank") GitHub repository
+                            |.

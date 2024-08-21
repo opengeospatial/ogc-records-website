@@ -53,8 +53,6 @@
                             <a href="https://emotional.byteroad.net/collections/ec_catalog/items/hex350_grid_cardio_1920" target="_blank">This</a>
                             is an example of a metadata record that uses some optional fields from the atomic model and extends it with more fields that are relevant for the use case.
                         </p>
-                    </div>
-                    <div class="col-md-6">
                         <p class="text-muted">
                             A
                             <i>record collection</i>
@@ -62,7 +60,64 @@
                             <i>catalog</i>
                             ) describes a group of related resources, which could be metadata records but also features, coverages or another type of geospatial information.
                         </p>
-                        <div class="text-center text-muted"><img src="assets/img/oar-blocks.png" alt="..." style="width: 40%" title="Generated with AI ∙ 6 August 2024 at 0:39 pm" /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-muted">
+                            The
+                            <i>Records API</i>
+                            specifies how to interact with the Catalog and request specific records. It is based on the principles of reusability, borrowing a lot of what was defined in
+                            <a href="https://github.com/opengeospatial/ogcapi-features" target="_blank">OGC API – Features</a>
+                            .
+                        </p>
+                        <div class="text-left">
+                            <ul>
+                                <li>
+                                    <p class="text-muted">
+                                        The
+                                        <i>collections</i>
+                                        endpoint can be used to access to information about a collection of records (
+                                        <i>e.g.</i>
+                                        : catalog metadata):
+                                        <code>/collections</code>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">
+                                        The
+                                        <i>items</i>
+                                        endpoint can be used to access the metadata records:
+                                        <code>/collections/{collectionId}/items</code>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">
+                                        The
+                                        <i>item</i>
+                                        endpoint can be used to retrieve a specific metadata record:
+                                        <code>/collections/{collectionId}/items/{itemId}</code>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-muted">
+                            The
+                            <i>collection</i>
+                            and
+                            <i>items</i>
+                            endpoints can be extended with additional parameters to enable querying. For instance, the
+                            <i>items</i>
+                            endpoint can be queried using a bounding box, a time frame of even free text. For more advanced query scenarios with complex filter expressions of logically connected query predicates, the
+                            <a href="https://docs.ogc.org/DRAFTS/21-065r3.html" target="_blank">Common Query Language (CQL)</a>
+                            can be used.
+                        </p>
+                        <p class="text-muted">
+                            <i class="fas fa-book-open"></i>
+                            You can read more about the OGC API - Records Standard on the
+                            <a href="https://docs.ogc.org/DRAFTS/20-004.html" target="_blank">editor's draft</a>
+                            and follow/participate (in) its development on the Standard's
+                            <a href="https://github.com/opengeospatial/ogcapi-records?" target="_blank">GitHub repository</a>
+                            .
+                        </p>
                     </div>
                 </div>
             </div>
