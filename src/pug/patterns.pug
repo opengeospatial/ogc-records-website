@@ -8,7 +8,7 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Standard
+        title Records Deployment Patterns
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/3d_emblem_lockup.ico')
@@ -35,74 +35,64 @@ html(lang='en')
         section#standard.page-section.bg-light
             .container
                 .text-center
-                    h2.section-heading.text-uppercase OGC API - Records Standard
+                    h2.section-heading.text-uppercase Records Deployment Patterns
                 .row.text-justified
                     .col-md-6
                         p.text-muted
-                            | The core requirements class boils down to three simple requirements ( 
-                            a(href='https://docs.ogc.org/is/20-057/20-057.html#req_core_tc-op' target="_blank") 1
-                            |,
-                            a(href='https://docs.ogc.org/is/20-057/20-057.html#req_core_core_tc-success' target="_blank") 5
-                            | and 
-                            a(href='https://docs.ogc.org/is/20-057/20-057.html#req_core_core_tc-error' target="_blank") 6
-                            | ), which capture what most web map applications are already doing:
+                            |OGC API - Records supports a number of deployment patterns for catalogs.
+                        p.text-muted
+                            | The 
+                            i crawlable catalog 
+                            | involves creating static metadata files along with the data, in a web accessible location (e.g.: S3 bucket).
+                            | At top-level, there should be a file to provide information about the catalog, including links to navigate through the metadata records.
+                        .text-center.text-muted
+                            img(src='assets/img/crawlable_catalogue_example.png', alt='...', style='width:40%', title='Generated with AI ∙ 6 August 2024 at 0:39 pm')
+                        p.text-muted
+                            | Although only providing visibility and navigation, the crawlable catalog comes with a very low implementation burden, and it can be low hanging fruit in terms of organising directories full of files (e.g.: EO images).  
+                            | In terms of data discovery, creating a crawlable catalog is certainly better than having no catalog.
+                        p.text-muted
+                            | The 
+                            i searchable catalog 
+                            | also allows accessing collection level metadata and the individual metadata records, but unlike the crawlable catalog, it enables clients to filter the response with query parameters.
+                            | This searching capability requires the metadata to be stored in a SQL or NoSQL database that can provide the querying functionality, so the simple setup using files on a web accessible folder is no longer possible.
+                    .col-md-6
+                        p.text-muted
+                            | These are some real-life examples of querying patterns that can be used in a searchable catalog. 
                         .text-left
                             ul
                                 li
-                                    p.text-muted Tiles must be available using a URL following a template such as:
-                                        code https://somehost.com/tiles/{z}/{x}/{y}.png
+                                    p.text-muted 
+                                        | Query by bounding box:
+                                        a(href="https://demo.pygeoapi.io/master/collections/dutch-metadata/items?bbox=50.75,3.2,53.7,7.22&f=json" target="_blank") 
+                                            code /collections/dutch-metadata/items?bbox=50.75,3.2,53.7,7.22
                                 li
-                                    p.text-muted Successful responses must return an http response with a 
-                                        code 200 
-                                        | status code.
+                                    p.text-muted 
+                                        | Free text search:
+                                        a(href="https://demo.pygeoapi.io/master/collections/dutch-metadata/items?q=Kaartboeck&f=json" target="_blank") 
+                                            code /collections/dutch-metadata/items?q=Kaartboeck
                                 li
-                                    p.text-muted If the requested tile is out-of range, a 
-                                        code 400 
-                                        | or 
-                                        code 404
-                                        | status codes should be returned (
-                                        code 204
-                                        | , in the case of empty tiles).
-                    .col-md-6
+                                    p.text-muted 
+                                        | Query by property:
+                                        a(href="https://demo.pygeoapi.io/master/collections/dutch-metadata/items?type=’dataset’&f=json" target="_blank") 
+                                            code /collections/dutch-metadata/items?type=’dataset’&f=json
                         p.text-muted
-                            | If you choose to also confom to the 
-                            a(href='https://docs.ogc.org/DRAFTS/19-072.html') “OGC API - Common - Part 1: Core”
-                            | Standard, then the {z}, {x} and {y} parameters need to be renamed to {tileMatrix}, {tileCol} and {tileRow}.
-                            | A server that conforms to all these requirements, should advertise it in a specific 
-                            code /conformance
-                            | endpoint.
-
+                            | The 
+                            code /collections 
+                            | endpoint exists in many other OGC APIs (e.g.: features, coverages). 
+                            | The 
+                            i local resources
+                            | catalog, extends other OGC APIs endpoints to behave like catalogs, enabling querying functionality.
+                            | For instance, this query filters a feature collection by bounding box:
+                            code https://emotional.byteroad.net/collections/hex350_grid_obesity_1920/items?bbox=160.6,-55.95,-170,-25.89&f=json
                         p.text-muted
-                            | If your tileset has some custom characteristics, you may want clients to know about these characteristics, by implementing the Tileset conformance class.
-                            | The information about tilesets - 
-                            a(href="https://docs.ogc.org/is/17-083r4/17-083r4.html#toc20" target="_blank") TileSet metadata 
-                            | - is drawn from another OGC Standard: the
-                            a(href="https://docs.ogc.org/is/17-083r4/17-083r4.html" target="_blank") OGC Two Dimensional Tile Matrix Set and Tile Set Metadata
-                            | . A tileset that does not cover the entire world, provides a limited set of zoom levels or uses an alternative projection are use cases for providing tileset metadata.
-
+                            | Other OGC API endpoints that can be repurposed as catalogs, include
+                            a(href="https://app.swaggerhub.com/apis/OGC/ogcapi-processes-1-example-1/1.0.0#/ProcessList/getProcesses" target="_blank") processes
+                            | and 
+                            a(href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/opengeospatial/ogcapi-coverages/master/standard/openapi/ogcapi-coverages-1.bundled.json#/Scenes/getCollectionScenes" target="_blank") coverage scenes.
                         p.text-muted
-                            | Finally, the Tileset List Requirements Class provides a list of tileSets, described by a subset of the tileSet metadata and links to access those tileSets.
-                            | This may be useful for servers that want to advertise multiple tileSets.
-
-                        p.text-muted
-                            | If you want to follow the development of the OGC API - Tiles Standard, please refer to the 
-                            a(href="https://github.com/opengeospatial/ogcapi-tiles" target="_blank") GitHub repository. 
-                            | If you want to study the Tiles API, you can check out the 
-                            a(href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/ogcapi-tiles-1.bundled.json" target="_blank") swagger page
-                            | .
-
-                .row
-                    .col-sm-3
-                        p.text-muted
-                            | The diagram on the left, shows the basic steps a client should follow to access a tile (“OGC API - Common - Part 1: Core”).
-                            | It starts by retrieving the list of collections available on the server and selecting one, in this example, "lakes". 
-                            | Then it retrieves the list of available TileMatrixSets, e.g.: the sets of tiles pre-rendered in a given coordinate reference system, and selects one.
-                            | Finally, it requests a specific tile, using the 
-                            code x,y,z 
-                            | indexes. 
-                    .col-sm-9
-                        img(src='assets/img/ogc-api-tiles.png', width="100%" title='OGC API - Tiles: Access workflow', alt='..')
-                .row
-                        p.text-muted
-                            | In this example we are requesting a vector tile, which is indicated by the file extension. The available formats are retrieved through content negotiation. Assuming a local server, the url path would look like: 
-                            code http://localhost/collections/lakes/tiles/WorldCRS84Quad/0/0/0.pbf
+                            i.fas.fa-book-open
+                            | You can read more about the OGC API - Records Standard on the
+                            a(href="https://docs.ogc.org/DRAFTS/20-004.html" target="_blank") editor's draft
+                            | and follow/participate (in) its development on the Standard's 
+                            a(href="https://github.com/opengeospatial/ogcapi-records?" target="_blank") GitHub repository
+                            |.
