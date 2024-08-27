@@ -74,8 +74,11 @@
                             <a href="https://web.archive.org/web/20141108182138/http://akinozkan.com/deep-web-derin-internet/" target="_blank">that more than 80% of the web content is not indexed by search engines.</a>
                             This includes content that is intentionally hidden such as private repositories, but also some organisation specific repositories, academic databases and government reports.
                         </p>
-                        <p class="text-muted">Do you create geospatial resources, like data, services or ML models? OGC API – Records gives you Standard interfaces to expose your resources and a Standard vocabulary to describe them.</p>
-                        <p class="text-muted">This description will make sure that search engines will index the resources in a structured way, so that humans and machines can find them, understand their descriptions and fetch them.</p>
+                        <p class="text-muted">
+                            <i>Do you create geospatial data, vocabularies, styles, processes, services or ML models? Do you manage repositories of metadata to describe your resources?</i>
+                            OGC API – Records gives you Standard interfaces to expose your resources and metadata, making them discoverable using a Standard vocabulary.
+                        </p>
+                        <p class="text-muted">OGC API - Records will ensure that search engines will index the resources in a structured way, so that both humans and machines can find, assess/evaluate and access them.</p>
                     </div>
                     <img src="assets/img/search-engines.jpeg" alt="..." style="width: 40%" title="Generated with AI ∙ 6 August 2024 at 0:39 pm" />
                 </div>
@@ -98,9 +101,9 @@
                         <p class="text-muted">
                             The Standard is developed and maintained by an
                             <a href="https://www.ogc.org/" target="_blank">independent Standards body,</a>
-                            which also offers compliance and certification, ensuring that interoperability really works. In addition, there was an harmonisation with the
-                            <a href="https://stacspec.org/en" target="_blank">STAC specification</a>
-                            , in order to make sure that STAC catalogs can understand OGC API - Records catalogs and vice versa.
+                            which also offers compliance and certification, ensuring maximum interoperability. In addition, the Standard is harmonized with the
+                            <a href="https://stacspec.org/en" target="_blank">STAC</a>
+                            family of specifications, in order to make sure that STAC catalogs can understand OGC API - Records catalogs and vice versa.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -109,7 +112,11 @@
                             <i class="fas fa-screwdriver-wrench fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Flexible</h4>
-                        <p class="text-muted">OGC API - Records supports different deployment patterns, which address different use cases. For instance, a public directory with satellite imagery can benefit from having a crawlable catalog (e.g.: also called “static” catalogue), which can be created with static files without the need to install any middleware or databases.</p>
+                        <p class="text-muted">
+                            OGC API - Records supports key deployment patterns which address different use cases. For instance, a public directory with satellite imagery can benefit from having a crawlable catalog (also called
+                            <i>static</i>
+                            catalogue), which can be created with static files without the need to install any API, middleware or databases.
+                        </p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -117,7 +124,7 @@
                             <i class="fas fa-laptop-code fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Based on Best Practices</h4>
-                        <p class="text-muted">The Standard is based on the technologies and vocabularies that make up the web today, such as REST, OpenAPI, JSON and HTML. This should ensure a smooth learning curve for any web developer, even if they are not familiar with GIS.</p>
+                        <p class="text-muted">The Standard is based on the technologies and vocabularies that embrace the modern Web, such as REST, OpenAPI, JSON and HTML. These mass market technologies and patterns provide a low barrier experience for any Web developer (where geospatial/GIS expertise is not required).</p>
                     </div>
                 </div>
             </div>
@@ -133,8 +140,7 @@
                             <strong>discovery</strong>
                             and
                             <strong>access</strong>
-                            to metadata about geospatial resources. Once a metadata record is found, it provides a way of
-                            <strong>fetching the associated data.</strong>
+                            to metadata about geospatial resources. Once a metadata record is found, it provides key information to help a user evaluate the resource as well as mechanisms for further interaction (data access, process execution, etc.).
                         </p>
                         <p class="text-muted">
                             The Standard offers three building blocks: a
@@ -153,11 +159,10 @@
                         <div class="text-left text-muted">
                             A
                             <i>searchable catalog</i>
-                            is a powerful way of publishing metadata, as it provides querying capabilities. For use cases where search is not essential, there is the alternative of deploying a
+                            is a powerful way of publishing metadata, as it provides querying capabilities For use cases where search is not essential, there is the alternative of deploying a
                             <i>crawlable catalog</i>
-                            , which only requires some files deployed along the data in a web accessible location. This deployment pattern imposes a very low implementation burden because it relies on HTTP to do most of the work of accessing the records of a catalog.
-                            <br />
-                            <br />
+                            , which only requires deploying metadata files alongside the data in a web accessible location (web server, object storage service, etc.).
+                            <This>This deployment pattern imposes a very low implementation burden because it relies solely on HTTP to do most of the work of navigating and accessing records in a catalog</This>
                             Learn more about the OGC API - Records
                             <a href="blocks.html" target="_blank">building blocks</a>
                             and
@@ -181,22 +186,28 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/wmo-logo.png" alt="..." />
-                            <h4>WMO WIS2 Global Discovery Catalogue instance</h4>
-                            <p class="text-muted">Powered by pygeoapi</p>
-                            <p class="text-muted">The WIS2 catalog from the World Meteorological Organization publishes weather/climate/water data from across the world.</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata" title="Catalog Resource" target="_blank"><i class="fa fa-link"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://wis2-gdc.weather.gc.ca/openapi" title="OpenAPI definition" target="_blank"><i class="fa fa-code"></i></a>
+                            <div class="ribbon-holder">
+                                <div class="ribbon ribbon-holder">Searchable</div>
+                                <img class="mx-auto rounded-circle" src="assets/img/wmo-logo.png" alt="..." />
+                                <h4>WMO WIS2 Global Discovery Catalogue</h4>
+                                <p class="text-muted">Powered by pygeoapi</p>
+                                <p class="text-muted">The World Meteorological Organization (WMO) provides a Global Discovery Catalogue as part of the WMO Information System (WIS2), providing a catalogue of weather, climate, and water data from 193 Members.</p>
+                                <a class="btn btn-dark btn-social mx-2" href="https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata" title="Catalog Resource" target="_blank"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="https://wis2-gdc.weather.gc.ca/openapi" title="OpenAPI definition" target="_blank"><i class="fa fa-code"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/logo-emotionalcities.svg" alt="..." />
-                            <h4>eMOTIONAL Cities Catalog</h4>
-                            <p class="text-muted">Powered by pygeoapi</p>
-                            <p class="text-muted">The catalog from the eMOTIONAL Cities project publishes +100 datasets from the Urban Health domain.</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://emotional.byteroad.net/catalogue" title="Catalog Resource" target="_blank"><i class="fa fa-link"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://emotional.byteroad.net/openapi" title="OpenAPI definition" target="_blank"><i class="fa fa-code"></i></a>
+                            <div class="ribbon-holder">
+                                <div class="ribbon ribbon-holder">Searchable</div>
+                                <img class="mx-auto rounded-circle" src="assets/img/logo-emotionalcities.svg" alt="..." />
+                                <h4>eMOTIONAL Cities Catalogue</h4>
+                                <p class="text-muted">Powered by pygeoapi</p>
+                                <p class="text-muted">The catalog from the eMOTIONAL Cities Horizon 2020 project exposes +100 datasets from the Urban Health domain.</p>
+                                <a class="btn btn-dark btn-social mx-2" href="https://emotional.byteroad.net/catalogue" title="Catalog Resource" target="_blank"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="https://emotional.byteroad.net/openapi" title="OpenAPI definition" target="_blank"><i class="fa fa-code"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,17 +226,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row" rowspan="3" class="table-info">
-                                    Java
-                                    <i class="fab fa-java"></i>
-                                </th>
+                                <th scope="row" rowspan="1" class="table-info"><i class="fa-solid fa-c"></i></th>
                                 <td>Cubewerx</td>
                                 <td title="Github repository"></td>
-                                <td title="Docker image">
-                                    <a href="https://hub.docker.com/r/pvretano/cubewerxsuite" target="_blank"><i class="fab fa-docker"></i></a>
-                                </td>
+                                <td title="Docker image"></td>
                                 <td title="Tutorial/Example">
-                                    <a href="https://test.cubewerx.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/cwtepcat2?f=json" target="_blank">
+                                    <a href="https://test.cubewerx.com/cubewerx/cubeserv/default/ogcapi/catalogues/collections/cwtepcat2" target="_blank">
                                         <i class="fas fa-graduation-cap"></i>
                                         /
                                         <i class="fas fa-code"></i>
@@ -233,6 +239,10 @@
                                 </td>
                             </tr>
                             <tr>
+                                <th scope="row" rowspan="2" class="table-info">
+                                    Java
+                                    <i class="fab fa-java"></i>
+                                </th>
                                 <td>GeoNetwork</td>
                                 <td title="Github repository">
                                     <a href="https://github.com/geonetwork/core-geonetwork" target="_blank"><i class="fab fa-github"></i></a>

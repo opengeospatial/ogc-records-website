@@ -10883,6 +10883,22 @@ p {
   margin-bottom: 4rem;
 }
 
+.ribbon-holder {
+  overflow: hidden;
+  position: relative;
+}
+
+.ribbon {
+  position: absolute;
+  background: #700418;
+  color: white;
+  transform: rotate(-45deg);
+  text-align: center;
+  top: 32px;
+  left: -32px;
+  width: 145px;
+}
+
 @media (min-width: 768px) {
   section {
     padding: 9rem 0;
