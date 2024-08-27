@@ -45,6 +45,22 @@ p {
     }
 }
 
+.ribbon-holder {
+    overflow: hidden;
+    position: relative
+  }
+  .ribbon {
+    position: absolute;
+    background: rgb(112, 4, 24);
+    color: white;
+    transform: rotate(-45deg);
+    text-align: center;
+    top: 32px;
+    left: -32px;
+    width: 145px;
+  }
+
+
 // Increase the padding on sections when screen size is greater
 // than the medium breakpoint (set by Bootstrap)
 
