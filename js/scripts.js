@@ -6,7 +6,20 @@
 //
 // Scripts
 // 
+function copyToClipboard(button){
 
+    var text = "curl -X 'GET' \
+        'https://emotional.byteroad.net/collections/hex350_grid_obesity_1920/items?bbox=-0.078921,51.473444,-0.063901,51.478062' \
+        -H 'accept: application/geo+json' ";
+
+    navigator.clipboard.writeText(text);
+
+    //console.log(button);
+    button.className="btn btn-success";
+    console.log("code copied to clipboard!")
+
+    //setTimeout(resetButton(button), 30000000);
+};
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -53,7 +66,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 
-
+    
 
 
 });
