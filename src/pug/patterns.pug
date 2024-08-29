@@ -8,7 +8,7 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Records Deployment Patterns
+        title Deployment Patterns
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/3d_emblem_lockup.ico')
@@ -22,12 +22,16 @@ html(lang='en')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
 
-        //script(src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js")
-        //link(rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3/swagger-ui.css")
-        //link(rel="stylesheet" type="text/css" href="assets/swagger-ui.css")
-
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
+
+        // prims.js
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-bash.min.js" integrity="sha512-35RBtvuCKWANuRid6RXP2gYm4D5RMieVL/xbp6KiMXlIqgNrI7XRUh9HurE8lKHW4aRpC0TZU3ZfqG8qmQ35zA==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-funky.min.css" integrity="sha512-KaCkQvJ0dQIhdJ0Am5LM3sgXA+Y0LWpbxkfKACZnlOqDvk54lZaWYk/sQiJGNRuSyFpe24jpjwJ4q+u3Rbez5g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+        // Core theme JS
+        script(src='js/scripts.js')
 
     body#page-top
 
@@ -35,7 +39,7 @@ html(lang='en')
         section#standard.page-section.bg-light
             .container
                 .text-center
-                    h2.section-heading.text-uppercase Records Deployment Patterns
+                    h2.section-heading.text-uppercase Deployment Patterns
                 .row.text-justified
                     .col-md-6
                         p.text-muted
@@ -43,17 +47,16 @@ html(lang='en')
                         p.text-muted
                             | The 
                             i crawlable catalog 
-                            | involves creating static metadata files along with the data, in a web accessible location (e.g.: S3 bucket).
+                            | pattern involves creating static metadata files along with the data, in a web accessible location (e.g.: S3 bucket).
                             | At top-level, there should be a file to provide information about the catalog, including links to navigate through the metadata records.
                         .text-center.text-muted
                             img(src='assets/img/crawlable_catalogue_example.png', alt='...', style='width:40%', title='Generated with AI ∙ 6 August 2024 at 0:39 pm')
                         p.text-muted
-                            | Although only providing visibility and navigation, the crawlable catalog comes with a very low implementation burden, and it can be low hanging fruit in terms of organising directories full of files (e.g.: EO images).  
-                            | In terms of data discovery, creating a crawlable catalog is certainly better than having no catalog.
+                            | Although providing only visibility and navigation, the crawlable catalog comes with a very low implementation burden, and it can be low hanging fruit in terms of organising directories full of files (e.g.: EO images).  
                         p.text-muted
                             | The 
                             i searchable catalog 
-                            | also allows accessing collection level metadata and the individual metadata records, but unlike the crawlable catalog, it enables clients to filter the response with query parameters.
+                            | pattern also allows accessing collection level metadata and the individual metadata records but, unlike the crawlable catalog, it enables clients to filter the response with query parameters.
                             | This searching capability requires the metadata to be stored in a SQL or NoSQL database that can provide the querying functionality, so the simple setup using files on a web accessible folder is no longer possible.
                     .col-md-6
                         p.text-muted
@@ -79,11 +82,21 @@ html(lang='en')
                             | The 
                             code /collections 
                             | endpoint exists in many other OGC APIs (e.g.: features, coverages). 
+                        p.text-muted
                             | The 
                             i local resources
-                            | catalog, extends other OGC APIs endpoints to behave like catalogs, enabling querying functionality.
+                            | catalog pattern extends other OGC APIs endpoints to behave like catalogs, enabling querying functionality.
                             | For instance, this query filters a feature collection by bounding box:
-                            code https://emotional.byteroad.net/collections/hex350_grid_obesity_1920/items?bbox=160.6,-55.95,-170,-25.89&f=json
+
+                        div.box#code-box
+                            pre
+                                code.language-bash
+                                    | curl -X 'GET' \
+                                    | 'https://emotional.byteroad.net/collections/hex350_grid_obesity_1920/items?bbox=-0.078921,51.473444,-0.063901,51.478062' \
+                                    | -H 'accept: application/geo+json'
+                        a.btn.btn-primary(onclick='copyToClipboard(this)') Copy
+
+                            //- code https://emotional.byteroad.net/collections/hex350_grid_obesity_1920/items?bbox=-0.078921,51.473444,-0.063901,51.478062&f=json
                         p.text-muted
                             | Other OGC API endpoints that can be repurposed as catalogs, include
                             a(href="https://app.swaggerhub.com/apis/OGC/ogcapi-processes-1-example-1/1.0.0#/ProcessList/getProcesses" target="_blank") processes
@@ -96,3 +109,5 @@ html(lang='en')
                             | and follow/participate (in) its development on the Standard's 
                             a(href="https://github.com/opengeospatial/ogcapi-records?" target="_blank") GitHub repository
                             |.
+
+

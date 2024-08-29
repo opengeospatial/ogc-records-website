@@ -67,7 +67,6 @@ html(lang='en')
                 a.btn.btn-primary.btn-xl.text-uppercase(href='#what') Tell Me More
                 a.btn.btn-primary.btn-xl.text-uppercase(href='#getstarted') Get Started
 
-
         // About
         section#what.page-section
             .container
@@ -76,15 +75,15 @@ html(lang='en')
                 .row.justify-content-center
                     .col-6
                         p.text-muted 
-                            | It is estimated 
+                            | The current estimate is  
                             a(href='https://web.archive.org/web/20141108182138/http://akinozkan.com/deep-web-derin-internet/' target="_blank")
                                 | that more than 80% of the web content is not indexed by search engines.
                             | This includes content that is intentionally hidden such as private repositories, but also some organisation specific repositories, academic databases and government reports. 
                         p.text-muted 
                             i Do you create geospatial data, vocabularies, styles, processes, services or ML models? Do you manage repositories of metadata to describe your resources? 
-                            | OGC API – Records gives you Standard interfaces to expose your resources and metadata, making them discoverable using a Standard vocabulary.
-                        p.text-muted                             
-                            | OGC API - Records will ensure that search engines will index the resources in a structured way, so that both humans and machines can find, assess/evaluate and access them.
+                            | Rhe OGC API - Records Standard specifies standard interfaces to expose your resources and metadata, making them discoverable using a Standard vocabulary.
+                        p.text-muted   
+                            | Implementations of the OGC API - Records Standard can ensure that search engines can index geospatial resources in a structured way, so that both humans and machines can find, assess/evaluate and access them.
                     img(src='assets/img/search-engines.jpeg', alt='...', style='width:40%', title='Generated with AI ∙ 6 August 2024 at 0:39 pm')
 
         // Why
@@ -100,9 +99,10 @@ html(lang='en')
                             i.fas.fa-handshake.fa-stack-1x.fa-inverse
                         h4.my-3 Interoperable
                         p.text-muted
-                            | The Standard is developed and maintained by an 
-                            a(href="https://www.ogc.org/" target="_blank") independent Standards body,
-                            |  which also offers compliance and certification, ensuring maximum interoperability.
+                            | The OGC API - Records Standard was developed and is maintained by the 
+                            a(href="https://www.ogc.org/" target="_blank") Open Geospatial Consortium (OGC),
+                            | , an international Standards Development Organization (SDO).
+                            |  The OGC also offers compliance and certification testing, ensuring maximum interoperability.
                             | In addition, the Standard is harmonized with the
                             a(href="https://stacspec.org/en" target="_blank") STAC
                             | family of specifications, in order to make sure that STAC catalogs can understand OGC API - Records catalogs and vice versa.
@@ -112,7 +112,7 @@ html(lang='en')
                             i.fas.fa-screwdriver-wrench.fa-stack-1x.fa-inverse
                         h4.my-3 Flexible
                         p.text-muted
-                            | OGC API - Records supports key deployment patterns which address different use cases. 
+                            | The OGC API - Records Standard defines requirements for key deployment patterns that address different use cases.
                             | For instance, a public directory with satellite imagery can benefit from having a crawlable catalog (also called 
                             i static 
                             | catalogue), which can be created with static files without the need to install any API, middleware or databases.
@@ -122,8 +122,7 @@ html(lang='en')
                             i.fas.fa-laptop-code.fa-stack-1x.fa-inverse
                         h4.my-3 Based on Best Practices
                         p.text-muted
-                            | The Standard is based on the technologies and vocabularies that embrace the modern Web, such as REST, OpenAPI, JSON and HTML. These mass market technologies and patterns provide a low barrier experience for any Web developer (where geospatial/GIS expertise is not required).
-
+                            | The OGC API - Records Standard is based on Web technologies and vocabularies, such as REST, OpenAPI, JSON and HTML. These mass market technologies and patterns provide a low barrier experience for any Web developer (where geospatial/GIS expertise is not required).
         // How
         section#how.page-section
             .container
@@ -132,7 +131,7 @@ html(lang='en')
                 .row.justify-content-center
                     .col-6
                         p.text-muted 
-                            | The OGC API - Records Standard provides 
+                            | An implementation of the OGC API - Records Standard provides 
                             strong discovery 
                             | and 
                             strong access 

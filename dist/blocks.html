@@ -33,7 +33,7 @@
                             <i>Record</i>
                             is the atomic unit of information in a catalog. The record model provides a minimal set of information to facilitate the discovery of the resource it points to (e.g.: discovery metadata). This includes some generic properties such as title, description, formats, but also information about
                             <i>when</i>
-                            and
+                            it was created and
                             <i>who</i>
                             created it. These properties are called
                             <i>queryables</i>
@@ -42,12 +42,12 @@
                         <p class="text-muted">
                             As in other OGC API Standards,
                             <a href="https://docs.ogc.org/DRAFTS/20-004.html#record-collection-overview" target="_blank">there are no mandatory encodings.</a>
-                            Servers are free to offer what they wish and clients are expected to use content negotiation to retrieve a suitable format.
+                            Servers are free to choose their offerings and clients are expected to use content negotiation to retrieve a suitable format.
                         </p>
                         <p class="text-muted">
                             The
                             <a href="https://github.com/opengeospatial/ogcapi-records?tab=readme-ov-file#the-record-common-component" target="_blank">record model</a>
-                            was intentionally kept simple, so that it could be use by non metadata experts. It has only one mandatory field and a few optional fields. It is anticipated that it will be extended by information communities who wish to add more content about their resources (e.g.: Machine Learning, Earth Observation).
+                            was intentionally kept simple, so that it could be used by non metadata experts. It has only one mandatory field and a few optional fields. It is anticipated that it will be extended by information communities who wish to add more content about their resources (e.g.: Machine Learning, Earth Observation).
                         </p>
                         <p class="text-muted">
                             <a href="https://emotional.byteroad.net/collections/ec_catalog/items/hex350_grid_cardio_1920" target="_blank">This</a>
@@ -65,7 +65,7 @@
                         <p class="text-muted">
                             The
                             <i>Records API</i>
-                            specifies how to interact with the Catalog and request specific records. It is based on the principles of reusability, borrowing a lot of what was defined in
+                            specifies how to interact with the catalog and request specific records. It is based on the principles of reusability, borrowing a lot of what was defined in
                             <a href="https://github.com/opengeospatial/ogcapi-features" target="_blank">OGC API – Features</a>
                             .
                         </p>
