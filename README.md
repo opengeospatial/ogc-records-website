@@ -1,6 +1,6 @@
 # README
 
-## Introduction
+## Introduction :beginner:
 
 This repository contains the code for the [OGC API - Records](https://records.developer.ogc.org/) micro website. If you are impatient to get it running, just jump to the [Quick Start](#quick-start) section. If you want to reuse this code for another website, you can scroll down to the [Reusing this repository](#reusing-this-repository) section.
 
@@ -12,7 +12,7 @@ This website is intended to present and describe the OGC API - Records (at this 
 
 The website uses the [node.js](https://nodejs.org/en) framework. The HTML is generated using the [PUG template rendering engine](https://pugjs.org/api/getting-started.html).
 
-## Quick Start
+## Quick Start :rocket:
 
 Clone this repository with:
 
