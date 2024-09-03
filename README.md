@@ -58,11 +58,11 @@ The content for the website is located on the pug files, under [./src/pug](./src
 If you are not familiar with pug, you can read more about it [here](https://pugjs.org/api/getting-started.html). 
 
 You should start by editing the [header.masthead](./src/pug/index.pug#+62), which contains the title and tag line. Here is a summary of other sections to modify:
-* [what.page-section](./src/pug/index.pug#71): high-level explanation of the Standard.
-* [why.page-section.](./src/pug/index.pug#90): Highlight three main reasons to use the Standard (1-2 paragraphs max, each).
-* [how.page-section](./src/pug/index.pug#127): description of how the Standard actually works. It should be longer than the `what` section, but still not too long. For more details, point to other pages, like [patterns](./src/pug/patterns.pug).
-* [inaction.page-section](./src/pug/index.pug#175): live deployments of Standard implementations (ask for contributions, if needed). 
-* [getstarted](./src/pug/index.pug#239): list of implementations of the Standard, organised by servers and clients and programming language. This is normally taken from the implementations page on the GitHub repo of the Standard.
+* [what.page-section](./src/pug/index.pug#+71): high-level explanation of the Standard.
+* [why.page-section.](./src/pug/index.pug#+90): Highlight three main reasons to use the Standard (1-2 paragraphs max, each).
+* [how.page-section](./src/pug/index.pug#+127): description of how the Standard actually works. It should be longer than the `what` section, but still not too long. For more details, point to other pages, like [patterns](./src/pug/patterns.pug).
+* [inaction.page-section](./src/pug/index.pug#+175): live deployments of Standard implementations (ask for contributions, if needed). 
+* [getstarted](./src/pug/index.pug#+239): list of implementations of the Standard, organised by servers and clients and programming language. This is normally taken from the implementations page on the GitHub repo of the Standard.
 
 To edit the styles of the different sections, have a look at the [./src/scss/](./src/scss/) folder. Global styles are on [./src/scss/_global.scss](./src/scss/_global.scss).
 
