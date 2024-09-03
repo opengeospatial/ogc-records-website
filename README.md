@@ -57,7 +57,7 @@ The content for the website is located on the pug files, under [./src/pug](./src
 
 If you are not familiar with pug, you can read more about it [here](https://pugjs.org/api/getting-started.html). 
 
-You should start by editing the [header.masthead](./src/pug/index.pug#+62), which contains the title and tag line. Here is a summary of other sections to modify:
+You should start by editing the [header.masthead](./src/pug/index.pug#L62), which contains the title and tag line. Here is a summary of other sections to modify:
 * [what.page-section](./src/pug/index.pug#L71): high-level explanation of the Standard.
 * [why.page-section.](./src/pug/index.pug#L90): Highlight three main reasons to use the Standard (1-2 paragraphs max, each).
 * [how.page-section](./src/pug/index.pug#L127): description of how the Standard actually works. It should be longer than the `what` section, but still not too long. For more details, point to other pages, like [patterns](./src/pug/patterns.pug).
