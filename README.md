@@ -46,7 +46,7 @@ To deploy it to GitHub pages:
 
 `git subtree push --prefix dist origin gh-pages`
 
-## Reusing this repository
+## Reusing this repository :recycle:
 
 You could fork and reuse the code on this repository for another Standard. This section contains some information to help you get started.
 
