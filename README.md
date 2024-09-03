@@ -1,6 +1,6 @@
 # README
 
-## Setup
+## Quick Start
 
 Clone this repository with:
 
@@ -33,3 +33,4 @@ The scripts will generate a static HTML build on [./dist](./dist/)
 To deploy it to GitHub pages:
 
 `git subtree push --prefix dist origin gh-pages`
+
