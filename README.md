@@ -28,9 +28,14 @@ When you are ready to commit changes, run:
 
 `npm run build`
 
-The scripts will generate a static HTML build on [./dist](./dist/)
+The scripts will generate a static build on [./dist](./dist/)
 
 To deploy it to GitHub pages:
 
 `git subtree push --prefix dist origin gh-pages`
 
+## License
+
+This project is released under an [MIT License](./LICENSE)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
