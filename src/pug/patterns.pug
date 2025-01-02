@@ -43,25 +43,26 @@ html(lang='en')
                 .row.text-justified
                     .col-md-6
                         p.text-muted
-                            |OGC API - Records supports a number of deployment patterns for catalogs.
+                            |The OGC API - Records Standard specifies several deployment patterns for accessing and maintaining geospatial asset catalogs.
                         p.text-muted
-                            | The 
-                            i crawlable catalog 
-                            | pattern involves creating static metadata files along with the data, in a web accessible location (e.g.: S3 bucket).
-                            | At top-level, there should be a file to provide information about the catalog, including links to navigate through the metadata records.
+                            | The Records API
+                            i Crawlable Catalog 
+                            | pattern involves creating static metadata files along with the data, in a web accessible location such as an Amazon S3 bucket.
+                            | At the top-level, there should be a file to provide information about the catalog, including links to navigate through the metadata records.
                         .text-center.text-muted
                             //- img(src='assets/img/crawlable_catalogue_example.png', alt='...', style='width:40%', title='https://github.com/opengeospatial/ogcapi-records/blob/master/images/crawlable_catalogue_example.png')
                             img(src='https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/images/crawlable_catalogue_example.png', alt='...', style='width:40%', title='crawlable catalogue example')
                         p.text-muted
-                            | Although providing only visibility and navigation, the crawlable catalog comes with a very low implementation burden, and it can be low hanging fruit in terms of organising directories full of files (e.g.: EO images).  
+                            | Although providing only visibility and navigation, a crawlable catalog can be implemented relatively quickly and can provide quick return on investment for use cases such as organizing directories full of files such as a repository of Earth Observation (EO) images. 
                         p.text-muted
-                            | The 
-                            i searchable catalog 
-                            | pattern also allows accessing collection level metadata and the individual metadata records but, unlike the crawlable catalog, it enables clients to filter the response with query parameters.
-                            | This searching capability requires the metadata to be stored in a SQL or NoSQL database that can provide the querying functionality, so the simple setup using files on a web accessible folder is no longer possible.
+                            | An implementation of the Records API  
+                            i Searchable Catalog 
+                            | pattern supports accessing collection level metadata and the individual metadata records. However, unlike the crawlable catalog, this pattern enables clients to filter the response with query parameters.
+                            | This searching capability requires the metadata to be stored in a SQL or NoSQL database that can provide the querying functionality.
+                            | As such, a simple setup using files on a web accessible folder is no longer possible.
                     .col-md-6
                         p.text-muted
-                            | These are some real-life examples of querying patterns that can be used in a searchable catalog. 
+                            | Bellow are some real-life examples of querying patterns that can be used in a searchable catalog. 
                         .text-left
                             ul
                                 li
@@ -82,10 +83,10 @@ html(lang='en')
                         p.text-muted
                             | The 
                             code /collections 
-                            | endpoint exists in many other OGC APIs (e.g.: features, coverages). 
+                            | endpoint is also defined in other OGC API Standards, such as OGC API - Features and OGC API - Coverages.  
                         p.text-muted
                             | The 
-                            i local resources
+                            i Local Resources
                             | catalog pattern extends other OGC APIs endpoints to behave like catalogs, enabling querying functionality.
                             | For instance, this query filters a feature collection by bounding box:
 
@@ -99,7 +100,7 @@ html(lang='en')
 
                             //- code https://emotional.byteroad.net/collections/hex350_grid_obesity_1920/items?bbox=-0.078921,51.473444,-0.063901,51.478062&f=json
                         p.text-muted
-                            | Other OGC API endpoints that can be repurposed as catalogs, include
+                            | Other OGC API endpoints that can be repurposed as catalogs include
                             a(href="https://app.swaggerhub.com/apis/OGC/ogcapi-processes-1-example-1/1.0.0#/ProcessList/getProcesses" target="_blank") processes
                             | and 
                             a(href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/opengeospatial/ogcapi-coverages/master/standard/openapi/ogcapi-coverages-1.bundled.json#/Scenes/getCollectionScenes" target="_blank") coverage scenes.
