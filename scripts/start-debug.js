@@ -1,14 +1,15 @@
 const concurrently = require('concurrently');
 const upath = require('upath');
 
-const browserSyncPath = upath.resolve(upath.dirname(__filename), '../node_modules/.bin/browser-sync');
+// Live-server doesn't need a complex path like BrowserSync, it can be run directly
+const liveServerCommand = 'npx live-server dist --port=3000';
 
 concurrently([
     { command: 'node --inspect scripts/sb-watch.js', name: 'SB_WATCH', prefixColor: 'bgBlue.bold' },
     { 
-        command: `${browserSyncPath} dist -w --no-online`,
-        name: 'SB_BROWSER_SYNC', 
-        prefixColor: 'bgBlue.bold',
+        command: liveServerCommand,
+        name: 'SB_LIVE_SERVER', 
+        prefixColor: 'bgGreen.bold',
     }
 ], {
     prefix: 'name',
@@ -16,7 +17,7 @@ concurrently([
 }).then(success, failure);
 
 function success() {
-    console.log('Success');    
+    console.log('Success');
 }
 
 function failure() {
