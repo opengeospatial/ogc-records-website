@@ -1,6 +1,6 @@
 {
-    "title": "Agency",
-    "name": "startbootstrap-agency",
+    "title": "OGC API - Records micro website",
+    "name": "ogc-records-website",
     "version": "7.0.5",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets && cp CNAME dist/",
@@ -12,28 +12,28 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "Agency is a one page HTML theme for Bootstrap.",
+    "description": "Source code.",
     "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
+        "ogc",
+        "records",
+        "metadata",
+        "standards",
+        "OpenAPI",
+        "developer"
     ],
-    "homepage": "https://startbootstrap.com/theme/agency",
+    "homepage": "https://records.developer.ogc.org/",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-agency/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/opengeospatial/ogc-records-website/",
+        "email": "devrel@ogc.org"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Joana Simoes",
     "contributors": [
-        "David Miller (https://davidmiller.io/)"
+        "doublebyte1 (https://github.com/doublebyte1/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-agency.git"
+        "url": "https://github.com/opengeospatial/ogc-records-website.git"
     },
     "dependencies": {
         "bootstrap": "5.0.2"
