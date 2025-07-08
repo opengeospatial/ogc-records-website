@@ -3,7 +3,7 @@
 ## Introduction
 This repository hosts the source of the OGC API - Records Micro Website: https://records.developer.ogc.org
 
-Currently, the website is served from the [gh-pages](https://github.com/opengeospatial/ogc-records-website/tree/gh-pages) branch.
+Currently, the website is served from the [gh-pages](https://github.com/opengeospatial/ogc-records-website/tree/gh-pages) branch. Read [this note](#note-about-publishing-the-website), to understand how the website is generated. 
 
 ## Quick Start :rocket:
 
@@ -29,7 +29,9 @@ Once you start the development server, the site will be available at:
 
 The hot reload will ensure that the changes you do on the code will be reflected on the browser.
 
-Commit all your changes to the `master` branch. **The `gh-pages` branch will be wiped each time, and generated dynamically from these [GitHub actions](https://github.com/opengeospatial/ogc-records-website/actions), which create a static build**. You don't need to do anything to publish the website - the republish will be triggered automatically with each push to `master`.
+### Note about Publishing the Website
+
+Commit all your changes to the `master` branch. **The `gh-pages` branch will be wiped each time, and generated dynamically from these [GitHub actions](https://github.com/opengeospatial/ogc-records-website/actions)**, which create a static build. In a nutshell, **you don't need to do anything to publish the website** - the republish will be triggered automatically with each push to `master`.
 
 ## Contributing 🤝
 
