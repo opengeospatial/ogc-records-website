@@ -12,7 +12,7 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "Source code.",
+    "description": "Source code for the OGC API - Records micro website.",
     "keywords": [
         "ogc",
         "records",
