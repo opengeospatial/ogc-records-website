@@ -23,7 +23,7 @@
     ],
     "homepage": "https://records.developer.ogc.org/",
     "bugs": {
-        "url": "https://github.com/opengeospatial/ogc-records-website/",
+        "url": "https://github.com/opengeospatial/ogc-records-website/issues/",
         "email": "devrel@ogc.org"
     },
     "license": "MIT",
