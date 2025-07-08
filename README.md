@@ -3,7 +3,7 @@
 ## Introduction
 This repository hosts the source code of the OGC API - Records Micro Website: https://records.developer.ogc.org
 
-Currently, the website is served from the [gh-pages](https://github.com/opengeospatial/ogc-records-website/tree/gh-pages) branch. Read [this note](#note-about-publishing-the-website), to understand how the website is generated. 
+The website is served from the [gh-pages](https://github.com/opengeospatial/ogc-records-website/tree/gh-pages) branch. Read [this note](#note-about-publishing-the-website), to understand how the website is generated. 
 
 ## Quick Start :rocket:
 
